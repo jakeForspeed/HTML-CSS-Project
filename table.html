@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #ECEBEB;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            border: none;
+        }
+        .container{
+            width: 60%;
+            background: #FFFFFF;
+            padding: 50px;
+        }
+        .container h1{
+            color: #303131;
+            margin-left: 30px;
+        }
+        .info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 30px;
+        }
+        .info .create-btn{
+            background: #303131;
+            color: #FFFFFF;
+            padding: 15px 40px;
+        }
+        table{
+            text-align: left;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th{
+            font-weight: bold;
+            color: #303131;
+        }
+        table td, table th{
+            padding: 20px;
+        }
+        table td .btn{
+            border-radius: 25px;
+            padding: 5px 10px;
+        }
+        table td .btn.active{
+            color:#C21C1C ;
+        }
+        table td .btn.not-published{
+            color: #909392;
+            background: #FFFFFF;
+        }
+        table td .btn.on-hold{
+            color:#E59090 ;
+        }
+        table tr:nth-child(even){
+            background: #ECEBEB;
+        }
+        table td:first-child{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        table td:last-child{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>Conset Solutions</h1>
+        <div class="info">
+            <p>Here you can create a new Consent Solution or change <br> one of your existing Consent Solution</p>
+            <button class="create-btn">Create new</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Domain</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Boardme</td>
+                    <td>2 domains</td>
+                    <td>
+                        <button class="btn active">Active</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>uidesigndaily</td>
+                    <td>2 domains</td>
+                    <td>
+                        <button class="btn not-published">Not published</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>uidesigndaily</td>
+                    <td>2 domains</td>
+                    <td>
+                        <button class="btn on-hold">On hold</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Document</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background:#F1EEF7 ;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .container{
+        background: #FFFFFF;
+        border: 5px solid #272749;
+        border-radius: 15px;
+        width: 65%;
+        max-width: 80%;
+    }
+    .header{
+        width: 400px;
+        max-width: 100%;
+        margin: 80px auto 0 auto;
+    }
+    .header h3{
+        text-align: center;
+    }
+    .container form{
+        margin-top: 20px;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+    }
+    form button, form input{
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding: 20px;
+        max-width: 100%;
+    }
+    form button{
+        width: 50px;
+        background: transparent;
+    }
+    .rows{
+        width: 100%;
+        /* background: chartreuse; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 30px 0;
+    }
+    .rows .col{
+        width: 300px;
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+    .rows .col p{
+        margin: 20px 0;
+    }
+    .rows .col:nth-child(1){
+        background: #E4E6F6;
+    }
+    .rows .col:nth-child(2){
+        background:#F6E4F5 ;
+    }
+    .rows .col:nth-child(3){
+        background: #FAE5E5;
+    }
+    .rows .col:nth-child(3) button{
+        background:#FFFFFF;
+    }
+    .rows .col button{
+        background: transparent;
+        border: none;
+        border: 1px solid #333;
+        padding: 10px 20px;
+        border-radius: 25px;
+    }
+ 
+ @media screen and (max-width:1450px) {
+     body{
+         justify-content: flex-start;
+     }
+ }
+</style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="header">
+            <h3>Search for statistics</h3>
+            <form>
+                <button><i class="fas fa-search"></i> </button>
+                <input type="text" placeholder="Search">
+            </form>
+        </div>
+
+        <div class="rows">
+            <div class="col">
+                <h3>Price calculator</h3>
+                <p>How much does 1 Eur in 1963 equal in today's prices? Adjust the rent?</p>
+                <button>Calculate price changes <i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="col">
+                <h3>Price calculator</h3>
+                <p>How much does 1 Eur in 1963 equal in today's prices? Adjust the rent?</p>
+                
+                <button>Search by name <i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="col">
+                <h3>Name statistics</h3>
+                <p>Find detailed table's with time and create your own</p>
+                <button>Go to tables <i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="col">
+                <h3>Calendar</h3>
+                <p>See the advance release of calendar in 2021</p>
+                <a href="#">Go to Calendar</a>
+            </div>
+            <div class="col">
+                <h3>Calendar</h3>
+                <p>Get the latest statistics release and publication by e-mail</p>
+                <a href="#">Receive e-mail alerts</a>
+            </div>
+            <div class="col">
+                <h3>Calendar</h3>
+                <p>Easily retrieve and integrate Statistics with your own system</p>
+                <a href="#">Open API</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+        *{ margin:0; padding: 0; box-sizing: border-box;}
+        
+
+
+
+        nav{
+            position: fixed;
+            top:0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding: 30px;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+            background: #FCFCFF;
+            transition: .4s ease;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            transition: 4s ease;
+        }
+        ul li a{
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #2B293E;
+            font-weight: bold;
+
+        }
+        nav h3{
+            color:#2B293E;
+        }
+        nav h3 span{
+            background: #2B293E;
+            padding: 10px;
+            border-radius: 50%;
+            color: #FFFFFF;
+        }
+        nav .notif{
+            display: flex;
+            align-items: center;
+        }
+        .notif span{
+            font-size: 1.3rem;
+        }
+        .notif img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+        .notif .uploadBtn{
+            border: none;
+            padding: 15px 40px;
+            color: #FFFFFF;
+            background:#2B293E ;
+            border-radius: 10px;
+        }
+        .notif .menu-hamburger{
+            width: 40px;
+            height: 40px;margin-left: 10px;
+            display: none;
+        }
+        .notif .uploadBtn i{
+            margin-right: 10px;
+        }
+        .side-nav{
+            position: fixed;
+            height: 100%;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            transition: .4s ease;
+        }
+        .side-nav .side-links{
+            width: 100%;
+            border-right: 1px solid #cccccc;
+            margin-top: 100px;
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .side-links button{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 0;
+            right: -40px;
+            display: none;
+            
+        }
+        .side-nav h1, .side-nav ul li a{
+            color:#2B293E ; 
+            font-weight: bold;
+        }
+        .side-nav ul{
+            list-style: none;
+            margin-top: 40px;
+        }
+        .side-nav ul li{
+            margin-bottom: 20px;
+        }
+        .side-nav ul li a{
+            padding: 10px;
+            display: inline-block;
+            border-radius: 25px;
+        }
+        .side-nav ul li a.active{
+            background: #DCDBE4;
+        }
+
+        main{
+            
+            padding: 40px;
+            margin: 100px 0 0 400px;
+        }
+
+        main .content{
+            padding: 150px 0 0 100px;
+        }
+        .profile .display-pic{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .display-pic img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 10px solid #FFFFFF;
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+        }
+        .display-pic .img-settings{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .img-settings button{
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 150px;
+        }
+        .img-settings button:nth-child(1){
+            background: #2B293E;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+        .img-settings button:nth-child(2){
+            background: #FFFFFF;
+            color:#2B293E;
+            border: 1px solid #2B293E;
+        }
+
+        .form-info{
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        .form-control{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .form-group{
+            margin-top: 20px;
+        }
+        .form-group label{
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea{
+            width: 100%;
+            padding: 15px;
+            font-weight: 700;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid silver;
+            color:#2B293E ;
+            resize: none;
+        }   
+
+        @media screen and (max-width:1000px) {
+            nav{
+                flex-wrap: wrap;
+            }
+            nav h3{
+                margin-bottom: 10px;
+            }
+            nav ul {
+                order: 3;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                display: none;
+            }
+            nav ul li{
+                margin-top: 20px;
+            }
+            .notif .menu-hamburger{
+                display: block;
+            }
+            .side-nav.side-toggle{
+                transform: translateX(0);
+            }
+            .side-nav{
+                transform: translateX(-400px);
+                background: rgba(255, 255,255, 0.7);
+                transition: .5s ease;
+            }
+            .side-links button{
+                display: block;
+            }
+            main{
+                margin: 100px 0 0 0;
+            }
+            main .content{
+                padding: 20px 0 0 0;
+            }
+            .form-info{
+                width: 100%;
+            }
+
+            .ul-tog{
+                display: flex;
+                align-items: center;
+            }
+            .side-ham-tog{
+                top: 300px;
+                /* transform: translateX(300px); */
+                transition: .4s ease;
+            }
+            .nav-tog{
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+
+        <h3><span>UI</span> Design Daily</h3>
+        
+        <ul class="menu-list">
+            <li><a href="#">Free Design</a></li>
+            <li><a href="#">License</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Contributors</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <div class="notif">
+            <span><i class="far fa-bell"></i></span>
+            <img src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+            <button class="uploadBtn"><i class="fas fa-upload"></i>Upload</button>
+            <button class="menu-hamburger "><i class="fas fa-bars"></i></button>
+        </div>
+        
+    </nav>
+
+
+
+    <div class="side-nav">
+
+        <div class="side-links">
+            <button class="side-menu-btn"><i class="fas fa-bars"></i></button>
+            <h1>Settings</h1>
+            <ul>
+                <li>
+                    <a class="active" href="#"> Public profile</a>
+                </li>
+                <li>
+                    <a href="#"> Account settings</a>
+                </li>
+                <li>
+                    <a href="#"> Notification </a>
+                </li>
+                <li>
+                    <a href="#"> PRO Account </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <main>
+
+        <div class="content">
+            
+            <div class="profile">
+                <h2>Public Profile</h2>
+                <div class="display-pic">
+                    <img src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                    <div class="img-settings">
+                        <button>Change picture</button>
+                        <button>Delete picture</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-info">
+                <form>
+
+                    <div class="form-control">
+                        <div class="form-group">
+                            <label for="">First name</label>
+                            <input type="text" value=IIdiko>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Last name</label>
+                            <input type="text" value=Gaspar>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Location</label>
+                        <input type="text" value=emailis@private.com>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Profession</label>
+                        <input type="text" value="UI/UX Designer">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Bio</label>
+                        <textarea>Open-Source designer @ UI Design Daily</textarea>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+<script>
+
+const menuHamburger = document.querySelector('.menu-hamburger')
+const sideHamburger = document.querySelector('.side-menu-btn')
+
+const nav = document.querySelector('nav')
+const ul = document.querySelector('.menu-list')
+const sideNav = document.querySelector('.side-nav')
+
+menuHamburger.addEventListener('click',()=>{
+
+    ul.classList.toggle('ul-tog')
+    nav.classList.toggle('nav-tog')
+    sideNav.classList.toggle('side-ham-tog')
+
+    
+})
+sideHamburger.addEventListener('click',()=>{
+
+    sideNav.classList.toggle('side-toggle')
+
+    
+})
+
+
+</script>
+
+
+
+
+</body>
+</html>

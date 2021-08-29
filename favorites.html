@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Document</title>
+
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+    background: #C9B189;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 400px;
+    background: #EAE8E5;
+    padding: 10px;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.container .menu-bar{
+    background:#917A37 ;
+    border-radius: 10px;
+}
+.menu-bar ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+li a{
+    padding: 20px;
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+li a:hover{
+    background: #E84445;
+}
+li a.active{
+    background: #E84445;
+}
+
+.container .content-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+.content-body .col {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+}
+.col h3{
+    font-size: 1rem;
+}
+.col .row-info{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.row-info img{
+    border-radius: 50%;
+}
+.row-info p {
+    font-size: .7rem;
+}
+.col .comments{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.comments p {
+    margin: 0 auto;
+    font-size: .7rem;
+}
+.comments .rate{
+    color: yellow;
+}
+
+@media screen and (max-width:700px) {
+    li a{
+        padding: 20px;
+    }
+    .container{
+        height: 100vh;
+    }
+}
+</style>
+
+
+</head>
+<body>
+    
+
+    <div class="container">
+        
+        <div class="menu-bar">
+            <ul>
+                <li>
+                    <a href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-user-friends"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-image"></i></a>
+                </li>
+                <li>
+                    <a class="active" href="#"><i class="fas fa-star"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i></a>
+                </li>
+            </ul>
+        </div>
+            <div class="content-body">
+
+                <div class="col">
+                    <h3>Celebrate with cinnamon cupcakes</h3>
+                    <img width="100%" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                    
+                    <div class="row-info">
+                        <img width="40px" src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                        <div class="profile-info">
+                            <p>Patricia R Holland</p>
+                            <p>Virginia, US</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p> <i class="fas fa-eye"></i> 125 comments</p>
+                        <span class="rate"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Celebrate with cinnamon cupcakes</h3>
+                    <img width="100%" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                    
+                    <div class="row-info">
+                        <img width="40px" src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                        <div class="profile-info">
+                            <p>Patricia R Holland</p>
+                            <p>Virginia, US</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p> <i class="fas fa-eye"></i> 125 comments</p>
+                        <span class="rate"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Celebrate with cinnamon cupcakes</h3>
+                    <img width="100%" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                    
+                    <div class="row-info">
+                        <img width="40px" src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                        <div class="profile-info">
+                            <p>Patricia R Holland</p>
+                            <p>Virginia, US</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p> <i class="fas fa-eye"></i> 125 comments</p>
+                        <span class="rate"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Celebrate with cinnamon cupcakes</h3>
+                    <img width="100%" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                    
+                    <div class="row-info">
+                        <img width="40px" src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                        <div class="profile-info">
+                            <p>Patricia R Holland</p>
+                            <p>Virginia, US</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p> <i class="fas fa-eye"></i> 125 comments</p>
+                        <span class="rate"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Celebrate with cinnamon cupcakes</h3>
+                    <img width="100%" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                    
+                    <div class="row-info">
+                        <img width="40px" src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                        <div class="profile-info">
+                            <p>Patricia R Holland</p>
+                            <p>Virginia, US</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p> <i class="fas fa-eye"></i> 125 comments</p>
+                        <span class="rate"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Celebrate with cinnamon cupcakes</h3>
+                    <img width="100%" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                    
+                    <div class="row-info">
+                        <img width="40px" src="https://data.whicdn.com/images/302058504/original.jpg?t=1511579073" alt="">
+                        <div class="profile-info">
+                            <p>Patricia R Holland</p>
+                            <p>Virginia, US</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p> <i class="fas fa-eye"></i> 125 comments</p>
+                        <span class="rate"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

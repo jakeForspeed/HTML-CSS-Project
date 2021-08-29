@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*, * ::before,* ::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+
+body{
+    background:#E6E6FF;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 40px;
+}
+
+.container{
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    position: relative;
+}
+.container::before, .container::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 40px;
+    background: #6B6BE0;
+}
+.container::before{
+    bottom: -40px;
+}
+.container::after{
+    top: -40px;
+}
+.header{
+    margin: 50px 0 0 0 ;
+    text-align: center;
+}
+.header h2{
+    margin: 20px 0;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 80px 50px 50px 50px;
+}
+.row .col{
+    width: 300px;
+    border: 1px solid #CCCCCC;
+    position: relative;
+    padding: 40px;
+}
+.row .col p{
+    margin: 30px 0;
+}
+.row .col p:nth-of-type(2){
+    margin-bottom: 80px;
+}
+
+button{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    width: 200px;
+    height: 50px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background: #6D6DE6;
+    cursor: pointer;
+    border: none;
+}
+p{
+    color:#444651;
+}
+.price{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 5px;
+}
+@media screen and (max-width:1000px) {
+    body{
+        align-items: flex-start;
+    }
+}
+
+
+
+
+</style>
+</head>
+<body>
+    
+
+
+    <div class="container">
+        <div class="header">
+            <h2>Ready to get started?</h2>
+            <a href="#">View all pricing plans</a>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <h2>Basic</h2>
+                <p>For teams and developers</p>
+                <p><span class="price">$0</span>/month</p>
+                <button>Join for free</button>
+            </div>
+            <div class="col">
+                <h2>Team</h2>
+                <p>Advanced collaboration and support for teams</p>
+                <p><span class="price">$2</span>/user/Month</p>
+                <button>Continue with team</button>
+            </div>
+            <div class="col">
+                <h2>Enterprise</h2>
+                <p>Security adn flexible deployment</p>
+                <p><span class="price">$40</span>/user/Month</p>
+                <button>Contact Sales</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

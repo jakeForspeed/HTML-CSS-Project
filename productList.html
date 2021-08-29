@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Document</title>
+
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#EFEEF4 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background: #FFFFFF;
+    text-align: center;
+    padding-top: 80px;
+    border-radius: 25px;
+}
+.container select{
+    width: 300px;
+    height: 60px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.container .rows{
+    display: flex;
+    gap: 10px;
+    margin: 50px 40px
+}
+.rows .col{
+    background: #F5F4F8 ;
+    padding: 0 40px;
+}
+.col span{
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 20px 0 10px 0;
+}
+.col p{
+    margin-top: 10px;
+    line-height: 1.3rem;
+    font-size: .9rem;
+}
+.col button{
+    border: none;
+    padding: 10px 20px;
+    background: #121927;
+    color: #FFFFFF;
+    margin:30px 0;
+}
+
+@media screen and (max-width:800px) {
+    body{
+        align-items: flex-start;
+    }
+    .rows{
+        flex-direction: column;
+    }
+    .rows .col{
+        width: 100%;
+    }
+}
+</style>
+
+
+</head>
+<body>
+
+
+    <div class="container">
+
+
+        <h2>Browse collections</h2>
+        <select name="" id="">
+            <option value="">Search & Explore</option>
+        </select>
+
+        <div class="rows">
+            <div class="col">
+                <span>
+                    <i class="fas fa-search"></i>
+                </span>
+                <h3>Search</h3>
+                <p>
+                    Search in any topic you are interested and <br> find any answer you need.
+                </p>
+                <button>
+                    Learn more about Search
+                </button>
+            </div>
+
+            <div class="col">
+                <span>
+                    <i class="fas fa-globe"></i>
+                </span>
+                <h3>Browser</h3>
+                <p>
+                    Search in any topic you are interested and <br> find any answer you need.
+                </p>
+                <button>
+                    Learn more about Browser
+                </button>
+            </div>
+
+            <div class="col">
+                <span>
+                    <i class="fas fa-map"></i>
+                </span>
+                <h3>Maps</h3>
+                <p>
+                    Search in any topic you are interested and <br> find any answer you need.
+                </p>
+                <button>
+                    Learn more about Maps
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Document</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+    background: #FFFFFF;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    padding: 0 40px;
+}
+
+.logo h3 span{
+    background: #202142;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+nav .navigation-list{
+    display: flex;
+}
+.navigation-list li{
+    border-radius: 25px;
+}
+.navigation-list li a{
+    padding: 10px 20px;
+    color: #9394A5;
+    font-weight: bold;
+}
+.navigation-list li a.active{
+    background: #F1F1FD;
+    color: #464764;
+    border-radius: 25px;
+}
+.navigation-list li a:hover{
+    background: #F1F1FD;
+    color: #464764; 
+    border-radius: 25px;
+}
+
+.close-nav{
+    background: transparent;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.sign-in-up button{
+    border: none;
+    background: transparent;
+}
+
+.sign-in-up .login-link a{
+    color: #202142;
+    padding: 10px 20px;
+}
+
+.sign-in-up .sign-up-link a{
+    background: #202142 ;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.hamburger{
+    background: transparent;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+header h1{
+margin-bottom: 20px;
+}
+header p{
+color: #444560;
+line-height: 1.5rem;
+font-size: 1.3rem;
+}
+header form{
+display: flex;
+border: 1px solid #CCCCCC;
+border-radius: 10px;
+overflow: hidden;
+margin-top: 20px;
+box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+form select, form input, form button{
+    height: 60px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+    font-size: 1.1rem;
+}
+form select{
+    border-right: 1px solid #CCCCCC;
+    cursor: pointer;
+}
+form button{
+    width: 50px;
+}
+form input{ 
+    width: 400px;
+}
+
+section{
+    height: 100vh;
+    text-align: center;
+}
+
+@media screen and (max-width:1000px){
+    nav{
+        position: relative;
+        padding-right: 25px;
+    }
+    nav .navigation-list{
+        position: absolute;
+        top: -100vh;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        transform: .3s ease;
+        position: absolute;
+        transition: .5s ease;
+    }
+
+    nav .navigation-list.active{
+        top: 0;
+        /* background: #202142 ; */
+        background: #FFFFFF ;
+    }
+    .hamburger{
+        display: block;
+    }
+    .close-nav{
+        color:#9394A5 ;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 20px;
+    }
+    .close-nav:hover{
+        color: #000000;
+    }
+    header h1{
+    margin-bottom: 20px;
+    }
+    header p{
+    font-size: 1rem;
+    }
+    form{
+        width: 90%;
+    }
+}
+
+</style>
+
+
+</head>
+<body>
+    
+
+
+    <nav>
+        <div class="logo">
+            <h3>
+                <span>UI</span>
+                Design Daily
+            </h3>
+        </div>
+
+        <ul class="navigation-list">
+            <li >
+                <a class="active" href="#home"> Free Design </a>
+            </li>
+            <li>
+                <a href="#license"> License </a>
+            </li>
+            <li>
+                <a href="#article"> Article </a>
+            </li>
+            <li>
+                <a href="#contributors"> Contributors </a>
+            </li>
+            <li>
+                <a href="#about"> About </a>
+            </li>
+
+            <button class="close-nav"><i class="fas fa-times"></i></i></button>
+        </ul>
+
+        <div class="sign-in-up">
+            <button class="login-link"><a href="#"> Log In</a></button>
+            <button class="sign-up-link" ><a href="#"> Sign Up</a></button>
+        </div>
+
+        <button class="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    
+
+    <header id="home">
+
+        <h1>Free UI resources for everyone</h1>
+
+        <p>The largest database of 100% free UI components and designs <br> available in the formats popular by UI designers</p>
+
+        <form>
+            <select name="" id="">
+                <option value="">Free designs</option>
+            </select>
+            <button> <i class="fas fa-search"></i> </button>
+            <input type="text" placeholder="Search">
+        </form>
+
+    </header>
+
+    <section id="#license">
+        <h1>License</h1>
+    </section>
+
+    <section id="#artice">
+        <h1>Article</h1>
+    </section>
+
+    <section id="#contributors">
+        <h1>Contributors</h1>
+    </section>
+    
+    <section id="#about">
+        <h1>About</h1>
+    </section>
+
+
+    <script>
+
+     const ul = document.querySelector('ul')
+     const open = document.querySelector('.hamburger')
+     const close = document.querySelector('.close-nav')
+
+     open.addEventListener('click',()=>{
+         ul.classList.toggle('active')
+     })
+     close.addEventListener('click',()=>{
+         ul.classList.toggle('active')
+     })
+
+    </script>
+
+
+</body>
+</html>
